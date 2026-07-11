@@ -4,6 +4,10 @@
       "rev": "e82c5a94ca1154b05c9d74d6f6f58c9991b1424f",
       "src": "https://github.com/vim-denops/denops.vim.git"
     },
+    "nvim-lspconfig": {
+      "rev": "d6ac7a0d46555d44bf21f4f9c65f5201f818b475",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
     "skkeleton": {
       "rev": "770b265dd115dba96ea5314642e35764654ef08f",
       "src": "https://github.com/vim-skk/skkeleton.git"
