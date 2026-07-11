@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "denops.vim": {
+      "rev": "e82c5a94ca1154b05c9d74d6f6f58c9991b1424f",
+      "src": "https://github.com/vim-denops/denops.vim.git"
+    },
+    "skkeleton": {
+      "rev": "770b265dd115dba96ea5314642e35764654ef08f",
+      "src": "https://github.com/vim-skk/skkeleton.git"
+    }
+  }
+}
