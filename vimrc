@@ -14,7 +14,7 @@ set scrolloff=5
 set nowrap
 set list
 set listchars=
-set listchars+=tab:\\u2192\
+set listchars+=tab:\\u2192\ "
 set listchars+=space:\\u00B7
 set listchars+=trail:\\u00B7
 set listchars+=nbsp:\\u237D
