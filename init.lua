@@ -1,3 +1,4 @@
+-- vim: foldmethod=marker
 local config_dir = vim.fn.stdpath('config')
 local vimrc = config_dir .. '/vimrc'
 if vim.fn.filereadable(vimrc) == 1 then
@@ -5,12 +6,11 @@ if vim.fn.filereadable(vimrc) == 1 then
 end
 vim.opt.shadafile = vim.fn.stdpath('config') .. '/shada'
 
+-- {{{ skkeleton
 vim.pack.add({
-  "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/vim-denops/denops.vim.git",
-  "https://github.com/vim-skk/skkeleton.git", -- depends on denops.vim
+  "https://github.com/vim-skk/skkeleton.git",
 })
-
 vim.api.nvim_create_autocmd("User", {
   pattern = "skkeleton-initialize-pre",
   callback = function()
@@ -21,9 +21,12 @@ vim.api.nvim_create_autocmd("User", {
     })
   end,
 })
-
 vim.keymap.set("i", "<C-\\>", "<Plug>(skkeleton-toggle)")
-
+-- }}}
+-- {{{ lsp
+vim.pack.add({
+  "https://github.com/neovim/nvim-lspconfig.git",
+})
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
 local function lsp_on_attach(client, bufnr)
   vim.lsp.completion.enable(true, client.id, bufnr, {
@@ -57,7 +60,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     })
   end,
 })
-
 vim.diagnostic.config({
   jump = {
     on_jump = function(_, bufnr)
@@ -66,5 +68,5 @@ vim.diagnostic.config({
   },
   virtual_text = true,
 })
-
 vim.lsp.enable('lua_ls')
+-- }}}

@@ -6,7 +6,7 @@
     },
     "nvim-lspconfig": {
       "rev": "d6ac7a0d46555d44bf21f4f9c65f5201f818b475",
-      "src": "https://github.com/neovim/nvim-lspconfig"
+      "src": "https://github.com/neovim/nvim-lspconfig.git"
     },
     "skkeleton": {
       "rev": "770b265dd115dba96ea5314642e35764654ef08f",
