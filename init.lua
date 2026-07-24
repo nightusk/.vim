@@ -70,3 +70,25 @@ vim.diagnostic.config({
 })
 vim.lsp.enable('lua_ls')
 -- }}}
+-- {{{ gitsigns
+vim.pack.add({
+  "https://github.com/lewis6991/gitsigns.nvim.git",
+})
+require('gitsigns').setup({
+})
+-- }}}
+-- {{{ lualine
+vim.pack.add({
+  "https://github.com/nvim-tree/nvim-web-devicons.git",
+  "https://github.com/nvim-lualine/lualine.nvim.git",
+})
+require('lualine').setup({
+})
+-- }}}
+-- {{{ nvim-autopairs
+vim.pack.add({
+  "https://github.com/windwp/nvim-autopairs.git",
+})
+require("nvim-autopairs").setup({
+})
+-- }}}
