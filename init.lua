@@ -11,6 +11,11 @@ if jit.os == "Windows" then
   vim.env.PATH = vim.env.MISE_DATA_DIR .. "/shims;" .. vim.env.PATH
 end
 
+if vim.g.neovide then
+  vim.g.neovide_opacity = 0.6
+  vim.g.neovide_normal_opacity = 0.6
+end
+
 -- {{{ skkeleton
 vim.pack.add({
   "https://github.com/vim-denops/denops.vim.git",
