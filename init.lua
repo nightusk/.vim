@@ -6,6 +6,11 @@ if vim.fn.filereadable(vimrc) == 1 then
 end
 vim.opt.shadafile = vim.fn.stdpath('config') .. '/shada'
 
+if jit.os == "Windows" then
+  vim.env.MISE_DATA_DIR = vim.fn.expand("~/.local/share/mise")
+  vim.env.PATH = vim.env.MISE_DATA_DIR .. "/shims;" .. vim.env.PATH
+end
+
 -- {{{ skkeleton
 vim.pack.add({
   "https://github.com/vim-denops/denops.vim.git",
