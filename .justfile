@@ -1,0 +1,2 @@
+init:
+    git switch main
